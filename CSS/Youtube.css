@@ -1,0 +1,478 @@
+:root {
+    --main-bg-color:#121212;
+    --main-txt-color: #ffffff;
+    --main-padding: 15px;
+  }
+
+#TopBar
+{
+    padding-top:10px;
+display:block;
+background-color:#121212;
+color:#ffffff;
+padding-bottom:5px;
+
+}
+#sideMenuDropdown
+{
+display:inline-block;
+width:auto;
+padding:5px;
+float:left;
+
+}
+#searchBar
+{
+    display:inline-block;
+    margin-left:14%;
+    width:50%;
+    background-color:var(--main-txt-color) !important;
+    color:var(--main-bg-color);
+    border:1px solid var(--main-bg-color); ;
+    border-radius: 5px;
+}
+#searchInput
+{
+    width:72%;
+    display:inline-block;
+    background-color:var(--main-txt-color) !important;
+    color:var(--main-bg-color);
+    pADDING:5PX;
+    float:left;
+}
+#searchInputText
+{
+    width:100%;
+    display:inline-block;
+    background-color:var(--main-txt-color) !important;
+    color:var(--main-bg-color);
+    border-right: 4px solid var(--main-bg-color);
+   
+}
+#AsOfDate
+{
+    width:22%;
+    display:inline-block;
+    float:left;
+    padding:5px;
+}
+#AsOfDateInput
+{
+    width:100%;
+    display:inline-block;
+    border:none;
+    background-color:var(--main-txt-color) !important;
+    color:var(--main-bg-color);
+    outline: none;
+}
+
+#searchButton
+{ 
+    width:auto;
+    display:inline-block;
+    PADDING:5PX;
+    float:right;
+
+}
+#notification
+{
+    
+    width:AUTO;
+    display:inline-block;
+    float :right;
+    padding: 5px 10px 5px 10px;
+}
+#userDropdown
+{   
+    width:AUTO;
+    display:inline-block;
+    float :right;
+   padding: 5px 10px 5px 10px;
+}
+#VideoPart
+{
+    width:100%;
+    display:block;
+}
+#LeftBar
+{
+    width:5%;
+    height:95vh;
+    background-color:var(--main-bg-color);
+    display:inline-block;
+}
+#GenreAndVids
+{   
+    width:95%;
+    display:inline-block;
+}
+#GenreDiv
+{
+    width:100%;
+    display:inline-block;
+}
+#AllVideos
+{   width:100%;
+    display:inline-block;
+}
+input[id="searchInputText"] { border: none ; outline: none;}
+.EachVideoClass
+{
+    display:block;
+    width:90%;
+    padding:15px 5% 15px 5%;
+    height:230px;
+    margin: 10px 0px 10px 5%;
+    border: 1px  solid var(--main-bg-color);
+    border-radius:2px;
+    box-shadow: 1px 1px 2px 1px var(--main-bg-color);
+    z-index:1251;
+    background-color: var(--main-txt-color);
+    color:var(--main-bg-color);
+   
+}
+.EachVideoDescClass
+{
+    display:inline-block;
+    width:60%;
+    padding:50px 20px 0px 20px;
+    float : right;
+    height:auto;
+   
+}
+.EachVidClass
+{
+    display:inline-block;
+    width:30%;
+    padding:0 20px 0px 20px;
+    float : left;
+    height:auto;
+}
+.EachVideoNameClass
+{
+     
+    font-size: 16px;
+    font-weight:600;
+}
+.EachChannelNameClass
+{
+    
+    font-size: 14px;
+    color:red;
+}
+.EachDescriptionClass
+{
+    
+    font-size: 12px;
+}
+
+.EachVideoStatsClass
+{
+    
+    font-size: 12px;
+    height:40px;
+}
+
+.EachVideoLikeClass
+{
+display:inline-block;
+float:left;
+height:40px;
+padding:0 10px 0px 10px;
+color: #0099e6;
+}
+
+.EachVideoDisLikeClass
+{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #ff0000;
+}
+
+.EachVideCommentClass
+{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #0099e6;
+}
+
+.EachVideViewClass
+{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #0099e6;
+}
+
+.disabled
+{
+    position: absolute;
+    width:100%;
+    height:100%;
+    opacity :1;
+    background-color:var(--main-bg-color);
+    top:0%;
+    z-index:1250;
+}
+#SinglevideoAndDesc
+{
+    
+    height:70%;
+    width:90%;
+    top:15%;
+    left:5%;
+    position: absolute;
+    border: 1px  solid  var(--main-bg-color);
+    border-radius:2px;
+    box-shadow: 2px 2px 10px 2px var(--main-bg-color);
+    z-index:1251;
+    background-color: var(--main-txt-color);
+    color: var(--main-bg-color);
+}
+#singleVideo
+{
+    display:inline-block;
+    float:left;
+    width:50%;
+    margin:3%;
+}
+#singleVideoDesc
+{
+    display:inline-block;
+    float:right;
+    width:38%;
+    margin:0% 3% 3% 3%;
+}
+.SinglevideoCloseClass
+{
+display:inline-block;
+float:right;
+height:3%;
+color:#ff0000;
+font-size: 18px;
+padding:10px 0px 10px 0px;
+cursor:pointer;
+
+}
+
+.SinglevideoCommentClass
+{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #0099e6;
+}
+.SinglevideoCommentADClass
+{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #0099e6;
+}
+.SinglevideoViewClass{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #0099e6;
+}
+.SinglevideoLikeClass{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #0099e6;
+}
+.SinglevideoDisLikeClass{
+    display:inline-block;
+    float:left;
+    height:40px;
+    padding:0 10px 0px 10px;
+    color: #ff0000;
+}
+.SinglevideoStatsClass{
+    font-size: 12px;
+    height:40px;
+}
+#singleVideoNameComments
+{
+   display:block;
+}
+#gap
+{
+    display:inline-block;
+    float:left;
+    height:3%;
+    width:95%;
+    color:var(--main-bg-color);
+font-size: 18px; 
+padding:10px 0px 10px 0px;
+}
+.SinglevideoNameClass
+{
+    font-weight:600;
+    font-size:16px;
+}
+.SingleChannelNameClass
+{
+    font-size:14px;
+    color:red;
+}
+
+SingleDescriptionClass
+{
+    font-size:12px;
+}
+
+.SinglevideoStatsClass
+{
+    padding:10px 0px 10px 0px;
+}
+
+#SingleVideoComments{
+overflow-y: auto;
+height: 260px;
+display:block;
+width:100%;
+border: 1px  solid var(--main-bg-color);
+    border-radius:2px;
+    box-shadow: 1px 1px 5px 1px var(--main-bg-color);
+}
+
+.CommenterLikesClass
+{
+    display:inline-block;
+    float:right;
+    height:20px;
+    padding:0 10px 0px 10px;
+    color: #0099e6;
+    width:20%;
+}
+
+.CommentsClass
+{
+    display:block;
+    border-bottom:1px dotted var(--main-bg-color);
+    
+}
+.CommenterNameAndLikesClass
+{
+    display:block;
+    height:21px;
+}
+.CommenterNameClass
+{
+    display:inline-block;
+    float:left;
+    font-weight:400;
+    width:80%;
+padding: 2px 0px 2px 5px;
+font-size:12px;
+font-weight:600;
+}
+
+.CommenterLikesCountClass
+{
+    display:inline-block;
+padding: 2px 0px 2px 5px;
+font-size:12px;
+}
+.CommentTextClass
+{
+display:block;
+padding: 2px 0px 2px 5px;
+font-size:12px;
+
+}
+
+.CommentDateClass
+{
+display:block;
+padding: 2px 0px 2px 5px;
+font-size:12px;
+color:red;
+font-weight:400;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  #CountrySelectPopup
+  {
+    height:auto;
+    width:30%;
+    top:40%;
+    left:35%;
+    position: absolute;
+    border: 1px  solid var(--main-bg-color);
+    border-radius:2px;
+    box-shadow: 2px 2px 10px 2px var(--main-bg-color);
+    z-index:1251;
+    
+  }
+  #CountriesDropdown
+  {
+      float:right;
+      padding:4px 10px 0px 0px !important;
+  }
+  #Countriesetc
+  {
+  background-color:var(--main-txt-color) !important;
+  color:var(--main-bg-color) !important;
+  font-weight:600 !important;
+  height: 30px !important;
+  
+  }
+
+  #Countries
+  {
+      width:10%;
+      background-color:var(--main-txt-color) !important;
+      color:var(--main-bg-color) !important;
+  }
+  .dropdown-item:hover
+  {
+  border: 1px solid var(--main-bg-color) !important;
+  border-radius:2px !important;
+  background-color:var(--main-bg-color) !important;
+  color: var(--main-txt-color) !important ;
+  font-weight:600 !important;
+  }
+
+  .WarnigHeader
+  {
+    height:auto;
+    width:auto;
+    top:40%;
+    left:20%;
+    position: absolute;
+    border: 1px var(--main-bg-color) solid;
+    border-radius:2px;
+    box-shadow: 1px 1px 2px 1px var(--main-bg-color);
+    z-index:1251;
+    padding:10px 20px 10px 20px;
+  }

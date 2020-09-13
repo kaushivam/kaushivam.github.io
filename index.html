@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Travel</title>
+
+<script src="https://use.fontawesome.com/82ec3d8dc5.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="Data\data.js"></script>
+<link rel="stylesheet" href="CSS\Youtube.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="JS\APILogic.js"></script>
+
+</head>
+<body  >  
+
+<div  id="TopBar">
+<div id="sideMenuDropdown"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+<div id="searchBar">
+    <div id="searchInput"><input type="text" placeholder="Hey! What  are you looking for" id="searchInputText" ></div>
+    <div id="AsOfDate"><input type="date" id="AsOfDateInput" name="AsOfDateInput"></div>
+    <div id="searchButton"><i class="fa fa-search fa-lg"></i></div>
+</div> 
+
+
+
+
+<div id="userDropdown"><i class="fa fa-user fa-2x" aria-hidden="true"></i></div>
+<div id="notification">
+        <i class="fa fa-fire fa-2x" aria-hidden="true"></i>
+        
+</div>
+<!-- Example single danger button -->
+<div class="btn-group" id="CountriesDropdown">
+    <button type="button" class="btn btn-danger dropdown-toggle" id="Countriesetc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Countries
+    </button>
+    <div class="dropdown-menu" id="Countries">
+      
+    </div>
+  </div>
+</div>
+
+<div id="VideoPart">
+       <!--<div id="LeftBar"></div>-->
+    <div id="GenreAndVids">
+          <div id="GenreDiv"></div>
+          <div id="AllVideos"></div>
+    </div>
+</div>
+   
+
+</body>
+<script> 
+var darkTheme=1;
+$('#searchButton').click(function()
+{
+    $('#AllVideos').empty();
+       var searchquery=$('#searchInputText').val();
+       console.log($('#AsOfDateInput').val());
+       var publishedBeforeDate=new Date($('#AsOfDateInput').val());
+    
+       var CurrentDate= new Date();
+       var YoutubeFoundDate= new Date(2005, 03, 23, 00, 00, 00); //23 April 2005
+       console.log(publishedBeforeDate);
+       console.log(CurrentDate);
+       console.log(YoutubeFoundDate);
+    if(searchquery=="")
+    {
+       // alert('Hey, you forgot the search entry ');
+        $('#AllVideos').append('<h1 class="WarnigHeader">Is your search string as empty as your mind?</h1>');
+        return;
+    }
+    if(publishedBeforeDate<YoutubeFoundDate)
+    {
+        $('#AllVideos').append('<h1 class="WarnigHeader">You seem to be searching for Stone Age </h1>');
+     return;
+    }
+    if(publishedBeforeDate>CurrentDate)
+    {
+      //  alert('');
+        $('#AllVideos').append('<h1 class="WarnigHeader">Well, Back to the Future is still a Fiction</h1>');
+     return;
+    }
+    
+    else
+    loadVideos();
+});
+$('#notification').click(function()
+{
+    fetchTrendingVideos(SelectedCountry);
+})
+
+    $('.dropdown-toggle').unbind('click').bind('click',function(){
+    $('.dropdown-toggle').dropdown()
+})
+$('#sideMenuDropdown').click(function()
+{
+    if (darkTheme==1)
+    {
+    document.documentElement.style.setProperty('--main-bg-color', '#ffffff');
+    document.documentElement.style.setProperty('--main-txt-color', '#121212');
+    darkTheme=0;
+
+
+    }
+    else{
+        document.documentElement.style.setProperty('--main-bg-color', '#121212');
+    document.documentElement.style.setProperty('--main-txt-color', '#ffffff');
+    darkTheme=1;
+    }
+})
+
+</script>
+
+</html>
