@@ -168,6 +168,7 @@ $('#AllVideos').append('<div id="SinglevideoAndDesc"><div id="singleVideo"></div
 '<div id="singleVideoNameComments">'+
 '<div id="SinglevideoName" class="SinglevideoNameClass"></div>'+ 
 '<div id="SingleChannelName" class="SingleChannelNameClass"></div>'+
+'<div id="SinglePublishDate" class="SinglePublishDateClass"></div>'+ 
 '<div id="SingleDescription" class="SingleDescriptionClass"></div>'+ 
 '<div id="SinglevideoStats" class="SinglevideoStatsClass">'+
 '<div id="SinglevideoComment" class="SinglevideoCommentClass"><i class="fa fa-comment"></i><div id="SinglevideoCommentCount" class="SinglevideoCommentCountClass"></div></div>'+
@@ -185,8 +186,9 @@ else{
     '<div id="singleVideoNameComments">'+
     '<div id="SinglevideoName" class="SinglevideoNameClass"></div>'+ 
     '<div id="SingleChannelName" class="SingleChannelNameClass"></div>'+
+    '<div id="SinglePublishDate" class="SinglePublishDateClass"></div>'+ 
     '<div id="SingleDescription" class="SingleDescriptionClass"></div>'+ 
-    '<div id="SinglevideoStats" class="SinglevideoStatsClass">'+
+     '<div id="SinglevideoStats" class="SinglevideoStatsClass">'+
     '<div id="SinglevideoComment" class="SinglevideoCommentClass"><i class="fa fa-comment"></i><div id="SinglevideoCommentCount" class="SinglevideoCommentCountClass"></div></div>'+
     '<div id="SinglevideoCommentAD" class="SinglevideoCommentADClass"><i class="fa fa-comments-o"></i><div id="SinglevideoCommentADCount" class="SinglevideoCommentADCountClass"></div></div>'+
     '<div id="SinglevideoView" class="SinglevideoViewClass"><i class="fa fa-eye"></i><div id="SinglevideoViewCount" class="SinglevideoViewCountClass"></div></div>'+
@@ -243,6 +245,9 @@ $('#SinglevideoCommentCount')[0].textContent=comments;
 $('#SinglevideoName')[0].textContent=Videodata[0].snippet.title;
 $('#SingleChannelName')[0].textContent=Videodata[0].snippet.channelTitle;
 $('#SingleDescription')[0].textContent=Videodata[0].snippet.description.substring(0,60);
+var dsipDate1=new Date(Videodata[0].snippet.publishedAt);
+
+$('#SinglePublishDate')[0].textContent=dsipDate1.toString().substring(4,15);
 
 })
 }
